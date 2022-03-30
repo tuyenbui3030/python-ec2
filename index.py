@@ -41,17 +41,18 @@ def waitSelect(driver):
 def process():
     print("bebebe")
     options = Options()
-    options.headless = False
+    options.headless = True
 
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
     driver.maximize_window()
     driver.get('https://www.rakuten-sec.co.jp/')
     driver.find_element_by_id('form-login-id').send_keys(username)
     driver.find_element_by_id('form-login-pass').send_keys(password)
     driver.find_element_by_id('login-btn').click()
-
+    print("ting ting")
     parsed_url = urlparse(driver.current_url)
     sessionID = parse_qs(parsed_url.query)['BV_SessionID'][0]
+    print("bim bim")
     nextUrl = 'https://member.rakuten-sec.co.jp/app/market_top.do;BV_SessionID={}'.format(
         sessionID)
     driver.get(nextUrl)
