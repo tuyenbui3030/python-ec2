@@ -65,6 +65,11 @@ def process():
       result.append(waitSelect(driver=driver))
       print("--------------")
     return(jsonify(result))
+
+@app.route('/tobi')
+def tobi():
+  return "Bing"
+
 @app.route('/')
 def index():
   result = process()
