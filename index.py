@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import time
 from tkinter.tix import Select
 from selenium import webdriver
