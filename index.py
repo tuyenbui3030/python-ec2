@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import time
-from tkinter.tix import Select
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
