@@ -43,7 +43,7 @@ def process():
     options = Options()
     options.headless = True
     print("bobobo")
-    driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
+    driver = webdriver.Chrome(options=options)
     driver.maximize_window()
     driver.get('https://www.rakuten-sec.co.jp/')
     driver.find_element_by_id('form-login-id').send_keys(username)
